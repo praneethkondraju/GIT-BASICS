@@ -1,0 +1,115 @@
+git clone :-
+------------
+git clone <url>
+
+git add :-
+---------
+git add filename.extention
+
+git diff :-
+---------
+Shows all changes or differences between the original file and modified 
+original file
+
+git diff
+
+git commit :-
+----------
+git commit -m "MESSAGE(what have you changes)"
+
+(or)
+
+NOTE :-
+-------
+Both add and commit can be done in same step by used below command
+
+git commit -am "MESSAGE" (or) git commit -a -m "MESSAGE"
+
+
+git status :-
+-----------
+Will gives present status and gives suggestions in any git command if 
+you have entered wrong and it will suggest you what command should run 
+next.
+
+git status
+
+git push :-
+---------
+It uploads your written content or modified content to your github 
+repository.
+
+git push
+
+If the data should be transferred to master from branches then the 
+following command is used
+
+git push origin master
+
+Merge confilts :-
+-----------------
+Occurs when multiple users try to access or modify same file at same 
+time then merge confilts occurs.
+
+git log :-
+----------
+Gives details of who made commit,etc.
+
+git log
+
+
+git reset :-
+---------
+
+
+
+
+Branching :-
+-----------
+Generally a repository can be divided into two factors namely 1)Master 
+and 2)Branching
+
+where master is origin.
+
+Assume if you forked a repository then you thought to make changes to a 
+file, If you make a direct change or modification to that file, If the 
+file consits of any mistakes i.e modification of original file that 
+would make mess.
+
+So think you have branched the code and modified, If the modified code 
+works perfect then you can merge the branch to master.
+
+case 1) If the branch file is not a forked one then you can directly 
+        added to master because your the root(Primary) user of your 
+        account.
+
+case 2)If it is a forked file, First you should merge the branch into 
+	master in your account it only modifies the change in your 
+        account. If you give a pull request to the user from whom you 
+	forked then the request is send to him and if he thinks that it 
+	is correct then he allows your branch to merge in his master. 
+ 	Then permanent chages takes place.  
+                               
+
+
+ git checkout -b "branchname"  is command used to create a branch in  
+ ----------------------------
+                                repository.
+
+
+
+git merge :-
+-----------
+Merge is used to merge branch files to Master if you think branch is 
+perfect file and no furthur modifications are required.
+
+
+git merge "branch name"
+
+
+Delete Branch :-
+-------------
+To delete a branch after merging into origin (or) If you think that the 
+brach was not necessary.
+
+git branch -D "Branch Name"
