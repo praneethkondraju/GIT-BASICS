@@ -57,13 +57,6 @@ Gives details of who made commit,etc.
 
 git log
 
-
-git reset :-
----------
-
-
-
-
 Branching :-
 -----------
 Generally a repository can be divided into two factors namely 1)Master 
