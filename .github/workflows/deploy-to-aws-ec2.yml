@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  Deploy-to-EC2:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -22,6 +22,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+
+      - name: Create SSH directory
+        run: mkdir -p ~/.ssh
 
       - name: Decode private key and save to file
         run: echo "${{ secrets.EC2_PRIVATE_KEY }}" | base64 -d > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
