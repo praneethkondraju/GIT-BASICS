@@ -23,6 +23,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      - name: Decode private key and save to file
+        run: echo "${{ secrets.EC2_PRIVATE_KEY }}" | base64 -d > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+
       - name: Deploy to EC2
         run: |
-          ssh -A ${{ secrets.EC2_PRIVATE_KEY }} ec2-user@{{secrets.Instance_ID}} 'cd /home/ssm-user/GIT-BASICS && git pull'
+          ssh -i ~/.ssh/id_rsa ec2-user@{{secrets.Instance_ID}} 'cd /home/ssm-user/GIT-BASICS && git pull'
