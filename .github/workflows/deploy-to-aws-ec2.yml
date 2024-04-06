@@ -31,4 +31,4 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          ssh -i ~/.ssh/id_rsa ec2-user@{{secrets.Instance_ID}} 'cd /home/ssm-user/GIT-BASICS && git pull'
+          ssh -i ~/.ssh/id_rsa ec2-user@{{secrets.Instance_IP}} 'cd /home/ssm-user/GIT-BASICS && git pull'
